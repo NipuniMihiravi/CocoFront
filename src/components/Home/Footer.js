@@ -7,7 +7,7 @@ const Footer = () => {
             <div className="section__container footer__container">
                 <div className="footer__col">
                     <div className="logos">
-                        <a href="#home"><img src="/images/logo.png" alt="logo" /></a>
+                        <a href="#home"><img src={`${process.env.PUBLIC_URL}/images/logo.png`} alt="logo" /></a>
                     </div>
                     <h1 className="section__header">Cocoloco Garden</h1>
                     <p className="section__description">
@@ -52,10 +52,10 @@ const Footer = () => {
                     </p>
                     <div className="footer__socials">
                         <a href="https://www.facebook.com/CocolocoGardens/">
-                            <img src="/images/facebook.png" alt="facebook" />
+                            <img src={`${process.env.PUBLIC_URL}/images/facebook.png`} alt="facebook" />
                         </a>
                         <a href="https://www.instagram.com/cocoloco_gardens/?hl=en">
-                            <img src="/images/instagram.png" alt="instagram" />
+                            <img src={`${process.env.PUBLIC_URL}/images/instagram.png`} alt="instagram" />
                         </a>
                     </div>
                 </div>

@@ -1,70 +1,53 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './App.css'; // Assuming your CSS file
-import axios from 'axios'; // If you're using axios for HTTP requests
+import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
 
-const Service7 = () => {
-    // State to hold the service data
-    const [serviceData, setServiceData] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+const Service3 = () => {
+    const navigate = useNavigate(); // Initialize navigate
 
-    // Fetch service data from the backend
-    useEffect(() => {
-        const fetchServiceData = async () => {
-            try {
-                const response = await axios.get('/service');
-                console.log('Fetched items:', response.data);
-                if (response.data.length > 4) {
-                    setServiceData(response.data[4]); // Set the first item
-                } else {
-                    setError('No service data found');
-                }
-            } catch (error) {
-                console.error('Error fetching items:', error);
-                setError('Error fetching service data');
-            } finally {
-                setLoading(false); // Set loading to false after fetch attempt
-            }
-        };
+    // Function to handle navigation
+    const handleNavigate = () => {
+        navigate('/galleries'); // Navigate to the gallery page
+    };
 
-        fetchServiceData();
-    }, []); // Empty dependency array ensures this runs only once on component mount
-
-    if (loading) {
-        return <div>Loading...</div>;
-    }
-
-    if (error) {
-        return <div>Error: {error}</div>;
-    }
-
-    // If data is successfully fetched, render the table
     return (
         <div className="table-container">
             <table className="service-table">
                 <tbody>
                     <tr>
                         <td className="image2-column">
-                            {/* Ensure serviceData is not null before rendering */}
-                            {serviceData && (
-                                <div className="image2-grid">
-                                    {serviceData.images && serviceData.images.map((image, imgIndex) => (
-                                        <img
-                                            key={imgIndex}
-                                            src={`data:image/jpeg;base64,${image}`} // Assuming images are base64 encoded
-                                            className="service2-image" // Class for the image styling
-                                            alt="" // Leave alt empty if the image is purely decorative
-                                        />
-                                    ))}
-                                </div>
-                            )}
+                            <div className="image2-grid">
+                                {/* Render four different images manually */}
+                                <img
+                                    src={`${process.env.PUBLIC_URL}/images/accomadation.jpg`}
+                                    className="service2-image"
+                                    alt="Day Out Event 1"
+                                />
+                                <img
+                                    src={`${process.env.PUBLIC_URL}/images/pacl9.jpeg`}
+                                    className="service2-image"
+                                    alt="Day Out 2"
+                                />
+                                <img
+                                    src={`${process.env.PUBLIC_URL}/images/pacl7.jpeg`}
+                                    className="service2-image"
+                                    alt="Day Out 3"
+                                />
+                                <img
+                                    src={`${process.env.PUBLIC_URL}/images/Room.jpeg`}
+                                    className="service2-image"
+                                    alt="Day Out 4"
+                                />
+                            </div>
                         </td>
                         <td className="content-column">
-                            <h2>{serviceData.heading}</h2>
-                            <p>{serviceData.description}</p>
-                            <p>{serviceData.description2}</p>
-                            <p>{serviceData.description3}</p>
-                            <button className="service-button">Click Here For See More Gallery ..</button>
+                            <h2>Cocoloco Accommodation</h2>
+                            <p>Cocoloco offers spacious accommodation in a beautiful bungalow that spreads across a large area. The bungalow features 7 well-appointed rooms, each equipped with modern bathroom facilities and air conditioning for your comfort. The rooms are designed with cozy bedding to ensure a restful stay.</p>
+                             <p>It’s the ideal retreat to unwind, surrounded by the serene beauty of Cocoloco Garden. Come and enjoy a calming, rejuvenating stay, where you can truly relax and recharge.</p>
+
+                            <button className="service-button" onClick={handleNavigate}>
+                                Click Here For See More Gallery ..
+                            </button>
                         </td>
                     </tr>
                 </tbody>
@@ -73,4 +56,4 @@ const Service7 = () => {
     );
 };
 
-export default Service7;
+export default Service3;

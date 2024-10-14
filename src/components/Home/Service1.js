@@ -13,14 +13,14 @@ const Service1 = () => {
     'Accommodation',
   ];
 
-  // Define the images for each service
+  // Define the images for each service, using process.env.PUBLIC_URL
   const serviceImages = {
-    'Day Outing': '/images/pool.jpg',
-    'Pre Shooting': '/images/pre1.jpeg',
-    'Wedding Event Celebrations': '/images/coco6.jpeg',
-    'Birthday Party Celebrations': '/images/birthday.jpg',
-    'Office Get Togethers': '/images/company.jpg',
-    'Accommodation': '/images/Room.jpeg',
+    'Day Outing': `${process.env.PUBLIC_URL}/images/pool.jpg`,
+    'Pre Shooting': `${process.env.PUBLIC_URL}/images/pre1.jpeg`,
+    'Wedding Event Celebrations': `${process.env.PUBLIC_URL}/images/coco6.jpeg`,
+    'Birthday Party Celebrations': `${process.env.PUBLIC_URL}/images/birthday.jpg`,
+    'Office Get Togethers': `${process.env.PUBLIC_URL}/images/company.jpg`,
+    'Accommodation': `${process.env.PUBLIC_URL}/images/Room.jpeg`,
   };
 
   const [selectedServiceIndex, setSelectedServiceIndex] = useState(0);

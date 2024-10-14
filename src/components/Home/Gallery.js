@@ -9,7 +9,7 @@ const Gallery = () => {
 
             <CoverImage/>
             <Gallery2/>
-            <Footer/>
+        
         </div>
     );
 };

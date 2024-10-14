@@ -52,8 +52,8 @@ const App = () => {
         <div className="navbar-container">
           <div className="logo-container">
             <Link to="/home">
-              <img src="/images/logo.png" alt="Logo" className="logo" />
-            </Link>
+                         <img src={`${process.env.PUBLIC_URL}/images/logo.png`} alt="Logo" className="logo" />
+                        </Link>
           </div>
 
           {/* Hamburger Icon */}

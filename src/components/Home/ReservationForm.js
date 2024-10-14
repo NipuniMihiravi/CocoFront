@@ -58,8 +58,20 @@ const ReservationForm = () => {
       try {
         const response = await axios.post('/contact', formData);
         console.log('Form Submitted:', response.data);
-        setOpenConfirmDialog(false); // Close confirmation dialog
-        setOpenSuccessDialog(true); // Open success dialog
+
+        // Close confirmation dialog and open success dialog
+        setOpenConfirmDialog(false);
+        setOpenSuccessDialog(true);
+
+        // Reset form data after successful submission
+        setFormData({
+          name: '',
+          email: '',
+          phone: '', // Reset phone field
+          functionDate: '',
+          event: '',
+          specialNote: ''
+        });
       } catch (error) {
         console.error('Error submitting form:', error);
         alert('There was an error submitting the form.');
@@ -68,6 +80,7 @@ const ReservationForm = () => {
       setOpenConfirmDialog(false);
     }
   };
+
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -152,9 +165,12 @@ const ReservationForm = () => {
               required
             >
               <option value="">Select an event</option>
-              <option value="wedding">Wedding</option>
-              <option value="birthday">Birthday</option>
-              <option value="conference">Conference</option>
+              <option value="Wedding Event">Wedding Event</option>
+              <option value="Birthday Event">Birthday Event</option>
+              <option value="Special Event">Special Event</option>
+              <option value="Day Outing">Day Outing</option>
+              <option value="Pre Shooting">Pre Shooting</option>
+              <option value="Accommodation">Accommodation</option>
             </select>
             {errors.event && <span className="error">{errors.event}</span>}
           </div>
@@ -212,7 +228,7 @@ const ReservationForm = () => {
         <DialogTitle id="success-dialog-title">Reservation Successful</DialogTitle>
         <DialogContent>
           <DialogContentText id="success-dialog-description">
-            Your reservation was successful! We will inform you of further details through the email you provided.
+            Your query submission was successful! We will inform you of further details through the email you provided.
           </DialogContentText>
         </DialogContent>
         <DialogActions>

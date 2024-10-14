@@ -6,12 +6,12 @@ const About1 = () => {
     <div className="about-container">
       <div className="about-grid">
         {/* First section: Images */}
-        <div className="about-images">
-          <img src="/images/coco3.jpeg" alt="about" />
-          <img src="/images/pacl8.jpeg" alt="about" />
-          <img src="/images/wedd2.jpeg" alt="about" />
-          <img src="/images/shoot15.jpeg" alt="about" />
-        </div>
+     <div className="about-images">
+       <img src={`${process.env.PUBLIC_URL}/images/coco3.jpeg`} alt="about" />
+       <img src={`${process.env.PUBLIC_URL}/images/pacl8.jpeg`} alt="about" />
+       <img src={`${process.env.PUBLIC_URL}/images/wedd2.jpeg`} alt="about" />
+       <img src={`${process.env.PUBLIC_URL}/images/shoot15.jpeg`} alt="about" />
+     </div>
 
         {/* Second section: Content */}
         <div className="about-content">

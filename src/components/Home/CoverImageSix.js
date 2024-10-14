@@ -12,8 +12,7 @@ const CoverImageSix = () => {
                             <td className="contact-image-container">
                                 <div className="image-contact-package">
                                     <img
-                                        src="/images/ser1.jpg" // Replace with the actual image path
-                                       alt="" // Leave alt empty if the image is purely decorative
+                                        src={`${process.env.PUBLIC_URL}/images/ser1.jpg`} alt="cocoloco garden"
                                         className="contact-image"
                                     />
                                 </div>
@@ -29,7 +28,7 @@ const CoverImageSix = () => {
                                     <ul>
                                         <li><strong>Phone:</strong> +94 77 782 8629</li>
                                         <li><strong>Email:</strong> info@cocolocagarden.com</li>
-                                        <li><strong>Address:</strong> 179/2 Sambodhi Mawatha, Polgasowita, Sri Lanka </li>
+                                        <li><strong>Address:</strong> 179/2 Sambodhi Mawatha, Polgasowita, Sri Lanka</li>
                                         <li><strong>Operating Hours:</strong> Monday-Sunday, 9 AM - 11 PM</li>
                                     </ul>
                                 </div>
@@ -41,9 +40,9 @@ const CoverImageSix = () => {
 
             {/* New paragraph added after the contact-container */}
             <div className="additional-info">
-                <h1>Your Satisfaction is Our Priority at Cocoloca Garden</h1>
+                <h1>Your Satisfaction is Our Priority at Cocoloco Garden</h1>
                 <p>
-                    At Cocoloca Garden, we are dedicated to ensuring that you have the most delightful and memorable experience possible. Our passionate team is committed to providing exceptional service, tailored to meet your specific needs and preferences. Whether you have questions about our diverse packages, wish to discuss event planning, or need assistance with any other inquiries, we are here to help. We pride ourselves on our attention to detail and strive to create a welcoming atmosphere where every guest feels valued and cared for. Don't hesitate to reach out to us at any time; your satisfaction is our top priority, and we look forward to assisting you!
+                    At Cocoloco Garden, we are dedicated to ensuring that you have the most delightful and memorable experience possible. Our passionate team is committed to providing exceptional service, tailored to meet your specific needs and preferences. Whether you have questions about our diverse packages, wish to discuss event planning, or need assistance with any other inquiries, we are here to help. We pride ourselves on our attention to detail and strive to create a welcoming atmosphere where every guest feels valued and cared for. Don't hesitate to reach out to us at any time; your satisfaction is our top priority, and we look forward to assisting you!
                 </p>
             </div>
         </>

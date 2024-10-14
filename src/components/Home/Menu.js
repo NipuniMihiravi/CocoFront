@@ -73,12 +73,12 @@ const CoverImageFive = () => {
             </table>
         </div>
         <div className="package-menu-image">
+<img src={`${process.env.PUBLIC_URL}/images/Food1.jpg`} alt="about" />
+   <img src={`${process.env.PUBLIC_URL}/images/Food2.jpg`} alt="about" />
+   <img src={`${process.env.PUBLIC_URL}/images/Food3.jpg`} alt="about" />
+   <img src={`${process.env.PUBLIC_URL}/images/Food4.jpg`} alt="about" />
+   <img src={`${process.env.PUBLIC_URL}/images/Food5.jpg`} alt="about" />
 
-           <img src="/images/Food1.jpg" alt="about" />
-           <img src="/images/Food2.jpg" alt="about" />
-             <img src="/images/Food3.jpg" alt="about" />
-              <img src="/images/Food4.jpg" alt="about" />
-              <img src="/images/Food5.jpg" alt="about" />
 
               </div>
         </div>
