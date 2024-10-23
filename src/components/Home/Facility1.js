@@ -11,7 +11,7 @@ const Facility1 = () => {
 
   const fetchFacilities = async () => {
     try {
-      const response = await axios.get('/facility'); // Adjust the endpoint as necessary
+      const response = await axios.get('${process.env.REACT_APP_API_URL}/facility'); // Adjust the endpoint as necessary
       setFacilities(response.data.slice(0, 5)); // Get the first five facilities
     } catch (error) {
       console.error('Error fetching facilities:', error);

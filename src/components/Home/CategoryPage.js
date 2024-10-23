@@ -9,7 +9,7 @@ const CategoryPage = () => {
 
     useEffect(() => {
         // Fetch categories from your backend
-        axios.get('/category')
+        axios.get('${process.env.REACT_APP_API_URL}/category')
             .then(response => {
                 setCategories(response.data);
                 setFilteredCategories(response.data); // Initialize filtered categories

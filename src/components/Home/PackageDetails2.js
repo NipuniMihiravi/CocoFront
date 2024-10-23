@@ -12,7 +12,7 @@ const CoverImageFive = () => {
     const fetchGalleryImages = async () => {
         try {
             // Fetch the documents with the specific name "Package Page (main) - only one selection"
-            const response = await axios.get('/gallery', {
+            const response = await axios.get('${process.env.REACT_APP_API_URL}/gallery', {
                 params: { name: "Cocoloco Day-Outing Package" } // Adjust the query based on your backend API
             });
 

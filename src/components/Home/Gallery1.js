@@ -12,7 +12,7 @@ const Gallery1 = () => {
     const fetchGalleryImages = async () => {
         try {
             // Fetch the documents with the specific name "Home Page (Gallery) - Add multiple images"
-            const response = await axios.get('/gallery', {
+            const response = await axios.get('${process.env.REACT_APP_API_URL}/gallery', {
                 params: { name: "Home Page (Gallery) - Add multiple images" } // Adjust the query based on your backend API
             });
 

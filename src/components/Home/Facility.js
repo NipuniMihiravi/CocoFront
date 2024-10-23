@@ -10,7 +10,7 @@ const Facility = () => {
     }, []);
 
     const fetchFacilities = () => {
-        axios.get('/facility')
+        axios.get('${process.env.REACT_APP_API_URL}/facility')
             .then(response => {
                 setFacilities(response.data);
             })

@@ -10,7 +10,7 @@ const CoverImageThird = () => {
     }, []);
 
     const fetchCovers = () => {
-        axios.get('/cover')
+        axios.get('${process.env.REACT_APP_API_URL}/cover')
             .then(response => {
                 console.log('Fetched items:', response.data);
                 if (response.data.length > 2) {

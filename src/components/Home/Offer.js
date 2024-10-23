@@ -10,7 +10,7 @@ const Offer = () => {
     }, []);
 
     const fetchOfferData = () => {
-        axios.get('/category') // Fetch all categories
+        axios.get('${process.env.REACT_APP_API_URL}/category') // Fetch all categories
             .then(response => {
                 console.log('Fetched category data:', response.data);
                 // Check if there are at least three categories

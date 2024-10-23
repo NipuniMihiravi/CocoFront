@@ -10,7 +10,7 @@ const MenuTable = () => {
     }, []);
 
     const fetchMenuData = () => {
-        axios.get('/category') // Fetch all categories
+        axios.get('${process.env.REACT_APP_API_URL}/category') // Fetch all categories
             .then(response => {
                 console.log('Fetched category data:', response.data);
                 // Check if there's at least one category

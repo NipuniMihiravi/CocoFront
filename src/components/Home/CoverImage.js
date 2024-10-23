@@ -15,7 +15,7 @@ const CoverImage = () => {
     const fetchCovers = async () => {
         try {
             // Fetch only the specific document where the name is "Home Page (Main) - Add multiple images"
-            const response = await axios.get('/gallery', {
+            const response = await axios.get('${process.env.REACT_APP_API_URL}/gallery', {
                 params: { name: "Home Page (Main) - Add multiple images" } // Adjust the query based on your backend API
             });
             console.log('Fetched items:', response.data);
